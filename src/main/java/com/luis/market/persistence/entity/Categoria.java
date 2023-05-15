@@ -15,7 +15,7 @@ public class Categoria {
 
     private String descripcion;
 
-    private boolean estado;
+    private Boolean estado;
 
     public Integer getIdCategoria() {
         return idCategoria;
@@ -33,11 +33,11 @@ public class Categoria {
         this.descripcion = descripcion;
     }
 
-    public boolean isEstado() {
+    public Boolean isEstado() {
         return estado;
     }
 
-    public void setEstado(boolean estado) {
+    public void setEstado(Boolean estado) {
         this.estado = estado;
     }
 }
