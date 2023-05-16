@@ -1,9 +1,7 @@
 package com.luis.market.persistence.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name="categorias")
@@ -16,6 +14,17 @@ public class Categoria {
     private String descripcion;
 
     private Boolean estado;
+
+    @OneToMany(mappedBy = "categoria")
+    private List<Producto> productos;
+
+    public List<Producto> getProductos() {
+        return productos;
+    }
+
+    public void setProductos(List<Producto> productos) {
+        this.productos = productos;
+    }
 
     public Integer getIdCategoria() {
         return idCategoria;
@@ -33,7 +42,7 @@ public class Categoria {
         this.descripcion = descripcion;
     }
 
-    public Boolean isEstado() {
+    public Boolean getEstado() {
         return estado;
     }
 
