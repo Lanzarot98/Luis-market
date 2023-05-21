@@ -7,11 +7,11 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
 
-@Mapper(componentModel = "spring", uses = {ProductMapper.class}) //para poder inyectar desde otros lugares
+@Mapper(componentModel = "spring", uses = {ProductMapper.class}) //para poder inyectar desde otros lugares uses = {ProductMapper.class}
 public interface PurchaseItemMapper {
 
     @Mappings({
-            @Mapping(source = "id.id_producto", target = "productId"),
+            @Mapping(source = "id.idProducto", target = "productId"),
             @Mapping(source = "cantidad", target = "quantity"),
             @Mapping(source = "estado", target = "active")
     })
@@ -21,7 +21,7 @@ public interface PurchaseItemMapper {
     @Mappings({
             @Mapping(target = "compra", ignore = true),
             @Mapping(target = "producto", ignore = true),
-            @Mapping(target = "id.id_compra", ignore = true)
+            @Mapping(target = "id.idCompra", ignore = true)
     })
     ComprasProducto toComprasProducto(PurchaseItem item);
 }

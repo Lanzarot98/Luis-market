@@ -17,6 +17,14 @@ public class Purchase {
         return purchaseId;
     }
 
+    public List<PurchaseItem> getItems() {
+        return items;
+    }
+
+    public void setItems(List<PurchaseItem> items) {
+        this.items = items;
+    }
+
     public void setPurchaseId(int purchaseId) {
         this.purchaseId = purchaseId;
     }
@@ -61,11 +69,4 @@ public class Purchase {
         this.state = state;
     }
 
-    public List<PurchaseItem> getItem() {
-        return items;
-    }
-
-    public void setItem(List<PurchaseItem> items) {
-        this.items = items;
-    }
 }

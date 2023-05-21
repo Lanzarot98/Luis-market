@@ -8,24 +8,24 @@ import java.io.Serializable;
 public class ComprasProductoPK implements Serializable {
 
     @Column(name ="id_compra")
-    private Integer id_compra;
+    private Integer idCompra;
 
     @Column(name ="id_producto")
-    private Integer id_producto;
+    private Integer idProducto;
 
-    public Integer getId_compra() {
-        return id_compra;
+    public Integer getIdCompra() {
+        return idCompra;
     }
 
-    public void setId_compra(Integer id_compra) {
-        this.id_compra = id_compra;
+    public void setIdCompra(Integer idCompra) {
+        this.idCompra = idCompra;
     }
 
-    public Integer getId_producto() {
-        return id_producto;
+    public Integer getIdProducto() {
+        return idProducto;
     }
 
-    public void setId_producto(Integer id_producto) {
-        this.id_producto = id_producto;
+    public void setIdProducto(Integer idProducto) {
+        this.idProducto = idProducto;
     }
 }
